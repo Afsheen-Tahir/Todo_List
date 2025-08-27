@@ -1,0 +1,59 @@
+
+
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href={% static 'style.css' %}>
+{% endblock %}
+
+<div class="container-fluid px-0 ">
+  <nav class="px-3 py-0 sticky-top navbar navbar-expand-lg navbar-dark blues ">
+    <a class="navbar-brand " href="{% url 'Home' %}">YOUR'S TODO</a>
+
+    <button class="navbar-toggler green" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav  ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-4">
+          <a class="nav-link active" aria-current="page" href="{% url "Home" %}">Home</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="{% url "Detail" %}">About Us</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="{% url "Done" %}">Done Task</a>
+        </li>
+      </ul>
+
+      <a href="{% url 'register'%}" class="btn btn-outline-light m-2  px-4 d-block d-md-inline  text-light">Sign In</a>
+
+      <!-- ✅ Only this button will open modal -->
+      {% comment %} <a href="{% url 'Add' %}"
+        class="btn btn-outline-light  m-2 d-block d-md-inline  text-light">
+        <i class="fa-solid pe-1 fa-plus"></i>  Add ToDo
+    </a> {% endcomment %}
+
+
+      <button type="button" data-bs-toggle="modal" data-bs-target="#addTodoModal"
+        class="btn btn-outline-light  m-2 d-block d-md-inline  text-light"> 
+        <i class="fa-solid pe-1 fa-plus"></i>  Add ToDo 
+      </button> 
+       {% if user.is_authenticated %}
+       <p  class="btn btn-outline-light  m-2 px-4 d-block d-md-inline  text-light">{{user.username}}</p>
+       <form method="post" action="{% url 'Logout' %}">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-outline-light  m-2 px-4 d-block d-md-inline  text-light">Logout</button>
+</form>
+    
+       {% else %}
+       <a type="button" href="{% url 'Login'%}" class="btn btn-outline-light  m-2 px-4 d-block d-md-inline  text-light">Login In</a>
+
+       {% endif %}
+       
+      
+    </div>
+  </nav>
+</div>
+

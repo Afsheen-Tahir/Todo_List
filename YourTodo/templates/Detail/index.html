@@ -1,0 +1,68 @@
+ {% extends "base.html" %}
+{% load static %}
+{% block title %}
+Detail
+{% endblock  %}
+{% block style %}
+<link rel="stylesheet" href={% static "Detail/style.css" %}>
+{% endblock  %}
+{% block content  %}
+ 
+  <section class="hero d-flex flex-column justify-content-center align-items-center" id="hero">
+    <h1>Welcome to Your Todo</h1>
+    <p>We Provide you a plateform to save your upcoming schedule according to your Need</p>
+    <div>
+      <a href="#services" class="btn btn-primary blues btn-lg">Services</a>
+      <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container text-center">
+      <h2>Our Features</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="service-box">
+            <h4>Save your Todo</h4>
+            <p>We will save your TODO ,You can check it once you loggin to your account</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-box">
+            <h4>Update And Delete</h4>
+            <p>We Provide a functionality to the user to update and delete your TODO once you log in</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-box">
+            <h4>Notify you about your upcoming TODO</h4>
+            <p>We will send you a notification once you loggin about your incoming events</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact container-fluid" id="contact">
+    <h2 class="text-center">Contact Us</h2>
+    
+        <form class="row g-3 mt-4" method="POST" action="{% url 'contact' %}">
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="name" placeholder="Your Name">
+      </div>
+      <div class="col-md-6">
+        <input type="email" class="form-control" name="email" placeholder="Your Email">
+      </div>
+      <div class="col-12">
+        <textarea class="form-control" rows="4" name="message" placeholder="Your Message"></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" value="submit" class="btn blues text-white">Send Message</button>
+      </div>
+    </form>
+  </section>
+
+ 
+
+{%endblock%}

@@ -1,0 +1,14 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.blues{
+    background-color: rgba(21, 76, 121, 0.85);
+}
+.text-light{
+    color: rgba(226, 226, 226,0.5);
+}
+
+ .btn:hover {
+    color: rgba(21, 76, 121, 0.85) !important
+ }

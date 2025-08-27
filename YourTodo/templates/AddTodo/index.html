@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Add
+{% endblock  %}
+{% block style %}
+<link rel="stylesheet" href={% static "Home/style.css" %}>
+{% endblock  %}
+{% block content  %}
+ {% comment %} <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+      Open Form
+    </button> {% endcomment %}
+  
+{% comment %} {{Formdata}} {% endcomment %}
+  <!-- Modal -->
+ {% comment %} <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name:</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>  {% endcomment %}
+    {% comment %} <form method="POST" class="form" >
+       {% csrf_token %}
+    {{Formdata}}
+
+ <button type="submit" value="Submit">Save</button>
+    </form>
+    {% endblock %} {% endcomment %}
+
+   
+{% comment %} {% endblock %} {% endcomment %}

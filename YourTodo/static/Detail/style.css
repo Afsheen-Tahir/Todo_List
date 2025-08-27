@@ -1,0 +1,57 @@
+
+    .hero {
+    background-image: url('../images/simone-hutsch-Uu9DmhbQnbc-unsplash.jpg');
+            background-size: cover;
+            background-position: center bottom;
+                  text-align: center;
+      padding: 120px 20px;
+    }
+        .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero a:active{
+      background-color: aliceblue;
+      color:rgba(21, 76, 121, 0.85);
+    }
+    .hero .btn {
+      margin: 10px;
+    }
+   
+    .services {
+      background: white;
+      padding: 80px 20px;
+    }
+    .services h2 {
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .service-box {
+            background-color: rgba(151, 200, 240, 0.4);
+ 
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-10px);
+    }
+   
+    .contact {
+      background-color: whitesmoke;
+      padding: 80px 20px;
+    }
+    .contact h2 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+   
+  

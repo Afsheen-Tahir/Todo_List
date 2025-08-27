@@ -1,0 +1,32 @@
+body{
+    font-size: 1em;
+}
+.blues{
+    background-color: rgba(21, 76, 121, 0.85);}
+.card{
+box-shadow: 4px 7px 24px 2px rgb(15, 13, 13,0.5);
+transition: all 0.3s ease-in-out ;
+  min-height: 350px;         /* fix height for all cards */
+   
+    font-size: 1em;
+}
+a{
+    color:white !important
+}
+a:hover{
+    color:white !important
+    /* text-decoration: none !important */
+}
+
+.card:hover{
+    transform: scale(1.02);
+ 
+
+}
+   .modal-backdrop.show {
+      backdrop-filter: blur(5px); /* Blur effect */
+      background-color: rgba(0,0,0,0.3); /* Light dark overlay */
+    }
+.update:hover{
+    color: wheat !important
+}

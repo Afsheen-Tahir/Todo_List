@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Update
+{% endblock  %}
+{% block style %}
+<link rel="stylesheet" href={% static "Update/style.css" %}>
+{% endblock  %}
+{% block content  %}
+  {% if TodoList %}
+      <form method="POST">
+        {% csrf_token %}
+        <div class=" d-flex justify-content-center align-items-center  mt-md-4">
+           
+
+            <div class="card transition mt-3">
+                <div class="card-header  text-white " >
+                   <h4> <strong> 
+                    {{TodoList.Title}} 
+                    </strong></h4>
+                </div>
+                <div class="card-body">
+                    <strong>Description:</strong>
+                    <p class="card-text mb-3 h-25">{{TodoList.Description}}</p>
+                  <p>
+                    <input type="checkbox" id="Isdone" name="Isdone" {%if TodoList.instance.Isdone %}checked{%endif%} />
+                    <label for="Isdone">Completed</label></p>
+                    
+                    <p><strong>Priority :</strong> &nbsp;{{TodoList.priority}}</p>
+                    <hr>
+                    <span><strong>Due Date: </strong> &nbsp; {{TodoList.due_date}}
+                        
+                    <button class="btn blues text-white d-block w-100 text-center fs-5 mt-3" value="Submit" type="Submit">save</button>
+
+        
+                    </div>
+                </div>
+                
+            </div>
+        
+        
+    </form> 
+    {% else %}
+    <h1>No Todo Found</h1>
+
+    {% endif %}
+    {% endblock %}
